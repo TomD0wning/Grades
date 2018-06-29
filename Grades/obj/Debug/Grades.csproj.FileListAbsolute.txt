@@ -5,6 +5,7 @@ C:\apps\Projects\Grades\Grades\bin\Debug\Grades.exe
 C:\apps\Projects\Grades\Grades\bin\Debug\Grades.pdb
 C:\apps\Projects\Grades\Grades\obj\Debug\Grades.exe
 C:\apps\Projects\Grades\Grades\obj\Debug\Grades.pdb
+<<<<<<< HEAD
 C:\apps\workspace\Grades\Grades\bin\Debug\Grades.exe.config
 C:\apps\workspace\Grades\Grades\bin\Debug\Grades.exe
 C:\apps\workspace\Grades\Grades\bin\Debug\Grades.pdb
@@ -12,3 +13,5 @@ C:\apps\workspace\Grades\Grades\obj\Debug\Grades.csprojAssemblyReference.cache
 C:\apps\workspace\Grades\Grades\obj\Debug\Grades.csproj.CoreCompileInputs.cache
 C:\apps\workspace\Grades\Grades\obj\Debug\Grades.exe
 C:\apps\workspace\Grades\Grades\obj\Debug\Grades.pdb
+=======
+>>>>>>> d38add2e42d077134e3ffde406c7860c1e1bed27

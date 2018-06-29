@@ -15,6 +15,7 @@ C:\apps\Projects\Grades\Grades.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatfo
 C:\apps\Projects\Grades\Grades.Tests\obj\Debug\Grades.Tests.csproj.CopyComplete
 C:\apps\Projects\Grades\Grades.Tests\obj\Debug\Grades.Tests.dll
 C:\apps\Projects\Grades\Grades.Tests\obj\Debug\Grades.Tests.pdb
+<<<<<<< HEAD
 C:\apps\workspace\Grades\Grades.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\apps\workspace\Grades\Grades.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\apps\workspace\Grades\Grades.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -32,3 +33,5 @@ C:\apps\workspace\Grades\Grades.Tests\obj\Debug\Grades.Tests.csproj.CoreCompileI
 C:\apps\workspace\Grades\Grades.Tests\obj\Debug\Grades.Tests.csproj.CopyComplete
 C:\apps\workspace\Grades\Grades.Tests\obj\Debug\Grades.Tests.dll
 C:\apps\workspace\Grades\Grades.Tests\obj\Debug\Grades.Tests.pdb
+=======
+>>>>>>> d38add2e42d077134e3ffde406c7860c1e1bed27
