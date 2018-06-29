@@ -12,14 +12,14 @@ namespace Grades
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine("Hello! This is the grade book program");
             //SpeechSynthesizer synth = new SpeechSynthesizer();
             //synth.Speak("Hello! This is the grade book program");
 
-            GradeBook book = new GradeBook();
+            Console.WriteLine("Hello! This is the grade book program");
+            IGradeTracker book = CreateGradeBook();
 
             GetBookName(book);
+            
 
             //book.NameChanged += new NameChangedDelegate(OnNameChanged
             //book.Name = "Tom";
@@ -32,7 +32,14 @@ namespace Grades
             WriteResults(book);
         }
 
-        private static void WriteResults(GradeBook book)
+        private static IGradeTracker CreateGradeBook()
+        {
+
+
+            return new ThrowAwayGradeBook();
+        }
+
+        private static void WriteResults(IGradeTracker book)
         {
             GradeStatistics stats = book.ComputeStatistics();
             Console.WriteLine(book.Name + " gradebook.");
@@ -41,10 +48,17 @@ namespace Grades
             WriteResults("Lowest: ", stats.LowestGrade);
             WriteResults(stats.Description, stats.LetterGrade);
 
+            foreach (float grade in book)
+            { 
+
+            }
+
+
+
             Console.ReadLine();
         }
 
-        private static void SaveGrades(GradeBook book)
+        private static void SaveGrades(IGradeTracker book)
         {
             using (StreamWriter outputFile = File.CreateText("grades.txt"))
             {
@@ -53,14 +67,14 @@ namespace Grades
             }
         }
 
-        private static void AddGrades(GradeBook book)
+        private static void AddGrades(IGradeTracker book)
         {
             book.AddGrade(88);
             book.AddGrade(95.2f);
             book.AddGrade(41);
         }
 
-        private static void GetBookName(GradeBook book)
+        private static void GetBookName(IGradeTracker book)
         {
             try
             {

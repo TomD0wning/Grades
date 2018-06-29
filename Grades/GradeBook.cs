@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Grades
 {
-    public class GradeBook
+    public class GradeBook : GradeTracker
     {
 
         public GradeBook()
@@ -16,55 +17,35 @@ namespace Grades
             grades = new List<float>();
         }
 
-        private List<float> grades;
-        private String _name;
-
-        public String Name
-        {
-            get { return _name; }
+        protected List<float> grades;
 
 
-            set
-            {
-                if (String.IsNullOrEmpty(value))
-                {
-                    throw new ArgumentException("Name cannot be null or empty");
-                }
-                if (_name != value && NameChanged != null)
-                {
-
-                    NameChangedEventArgs args = new NameChangedEventArgs();
-                    args.ExisingName = _name;
-                    args.NewName = value;
-
-                    NameChanged(this, args);
-
-                }
-                _name = value;
-
-            }
-        }
-
-        public void WriteGrades(TextWriter destination)
+        public override void WriteGrades(TextWriter destination)
         {
             for (int i = 0; i < grades.Count; i++)
             {
                 destination.WriteLine(grades[i]);
             }
         }
-        public event NameChangedDelegate NameChanged;
+        
 
-        public void AddGrade(float grade)
+        public override void AddGrade(float grade)
         {
             grades.Add(grade);
         }
 
+        public override IEnumerator GetEnumerator() 
+        {
+            return grades.GetEnumerator();
+        }
 
 
-        public GradeStatistics ComputeStatistics()
+
+        public override GradeStatistics ComputeStatistics()
         {
             GradeStatistics stats = new GradeStatistics();
 
+            Console.WriteLine("GradeBook::ComputeStatistics");
 
             float sum = 0;
             foreach (float grade in grades)
